@@ -1,0 +1,948 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #121212;
+}
+
+.cartegorias{
+    animation: pagina 1s linear forwards reverse;
+}
+fieldset {
+        overflow: hidden;
+        animation: pagina 2s linear forwards reverse;
+}
+@keyframes pagina {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+.mais, footer h1 {
+    overflow: hidden;
+    animation: anim 2s linear forwards reverse;
+}
+.colecao {
+    overflow: hidden;
+    animation: anim 1s linear forwards reverse;
+}
+@keyframes anim {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+/*NavBar*/
+
+header, nav, ul, li, .pesquisa {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(183, 7, 7);
+    align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    height: 90px;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+header {
+    box-shadow: 0 5px 5px black;
+    width: 100%;
+}
+nav ul, nav li {
+    background: none;
+    margin-right: 15px;
+}
+nav a {
+    padding: 5px;
+}
+li a:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgb(163, 0, 0);
+    background: rgb(163, 0, 0);
+}
+.menubar {
+    display: none;
+}
+.pesquisa {
+    background: none;
+}
+input[type=text] {
+    border-radius: 2px;
+    height: 30px;
+    border: 2px solid black;
+    outline: 0;
+    padding: 3px;
+}
+.busca {
+    background: black;
+    border-radius: 0 4px 4px 0;
+    height: 30px;
+    width: 30px;
+    margin: 0 30px 0 0;
+    padding: 2px;
+}
+svg {
+    color: white;
+    height: 20px;
+    margin: 3px 0 0 3px;
+    cursor: pointer;
+}
+.logo{
+    border: none;
+    outline: 0;
+    margin: 4px 0 0 5px;
+}
+
+/*Cartegoria*/
+
+h1, h2{
+    font-size: 40px;
+    text-align: center;
+    margin: 40px;
+    color: white;
+}
+.cartegorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.adicionados {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    display: grid;
+}
+.cartegorias h2 {
+    box-shadow: 0 5px 5px black;
+    margin: 0;
+    font-size: 25px;
+    background: rgb(183, 7, 7);
+    width: 100%;
+}
+.adicionados h1 {
+    padding-top: 15px;
+    box-shadow: 0 5px 5px black;
+    margin: 0;
+    font-size: 30px;
+    background: rgb(183, 7, 7);
+    width: 100%;
+}
+.cartegorias img {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+.cartegoria, .adicionados {
+    cursor: pointer;
+    margin: 10px;
+    display: grid;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to top, rgb(183, 7, 7), rgb(0, 0, 0)) 1;
+}
+.cartegoria:hover, .adicionados:hover, .filme:hover {
+    box-shadow: inset 0 6px 100px rgb(183, 7, 7);
+}
+
+/*Adicionados Recentemente*/
+
+.filmes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+}
+.capa {
+    background: red;
+    display: grid;
+    margin: 20px;
+    grid-row: 2 / 3;
+}
+.capa img {
+    width: 100%;
+    height: 100%;
+    margin: 5px 0 0 0;
+}
+.filmes p, .colecoes p {
+    background: rgb(183, 7, 7);
+    height: 45px;
+    width: 100%;
+    margin: 0 0 -23px 0;
+    text-align: center;
+    padding-top: 3%;
+    z-index: 2;
+    color: white;
+    box-shadow: inset 0 5px 5px rgb(255, 0, 0), 0 5px 5px black;
+}
+.filme, .colecao {
+    display: grid;
+    margin: 20px 10px;
+    border-width: 3px;
+    cursor: pointer;
+    box-shadow: inset 0 6px 100px rgb(0, 0, 0);
+    flex: 0 0 200px;
+}
+.filmes .filme:hover .info {
+    display: block;
+}
+.data {
+    width: 100%;
+    grid-row: 3 / 3;
+}
+.data p{
+    background: rgb(183, 7, 7);
+    height: 26px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: -20px;
+    grid-row: 1 / 2 ;
+    box-shadow: inset 0 5px 5px rgb(255, 0, 0), 0 5px 5px black;
+}
+.info {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    background: rgb(183, 7, 7);
+    margin-top: 38px;
+    height: 6%;
+    padding: 5px;
+    border-radius: 0 0 5px 0;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, rgb(183, 7, 7), rgb(0, 0, 0)) 1;
+}
+.info p{
+    font-size: 13px;
+    background: none;
+    text-align: left;
+    box-shadow: none;
+}
+.duracao, .linguagem {
+    height: 50%;
+}
+
+/*Coleção*/
+
+.colecoes {
+    overflow: hidden;
+}
+.colecao {
+    margin-top: 20px;
+    display: flex;
+    overflow-x: scroll;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, rgb(183, 7, 7), rgb(0, 0, 0)) 1;
+} 
+
+.colecao .filme:hover .info {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    color: white;
+    margin-top: -25px;
+    height: 40px;
+    justify-content: space-evenly;
+    box-shadow: 0 5px 5px black;
+}
+.colecao .filme:hover .info p {
+    font-size: 15px;
+}
+.colecao .linguagem, .colecao .duracao {
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgb(163, 0, 0);
+    background: rgb(163, 0, 0);
+    height: 100%;
+    padding: 3px;
+}
+
+.colecoes h1 {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/*Footer*/
+
+footer {
+    margin: 50px 0 0 0;
+    overflow: hidden;
+}
+footer fieldset {
+    width: 60%;
+    margin: 0 auto;
+}
+.telefone{
+    display: flex;
+}
+.numero {
+    width: 100%;
+}
+.ddd {
+    width: 30%;
+}
+.numero input {
+    border-radius: 0 20px 20px 0;
+    border: none;
+    height: 25px;
+    margin: 5px 0 10px 0;
+    width: 100%;
+    padding-left: 5px;
+    outline: 0;
+}
+.ddd select{
+    border-radius: 20px 0 0 20px;
+    border: none;
+    height: 25px;
+    margin: 5px 0 10px 0;
+    width: 100%;
+    padding-left: 10px;
+    text-align: center;
+    outline: 0;
+}
+.nome input, .email input{
+    border: none;
+    height: 25px;
+    margin: 5px 0 10px 0;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    outline: 0;
+}
+footer textarea {
+    margin: 5px 0 10px 0;
+    border-radius: 10px;
+    padding: 10px;
+    outline: 0;
+}
+.nome, .email, .telefone, .recado {
+    margin-top: 10px;
+    color: white;
+}
+
+/*Botão*/
+
+.botao7 {
+    margin-top: 50px;
+    height: 60px;
+    width: 130px;
+    border-radius: 5px;
+    border-color: red;
+    border-style: solid;
+    border-width: 3px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    display: grid;
+    overflow: hidden;
+    cursor: pointer;
+}
+.botao7:hover {
+    border: none;
+}
+.botao7:hover span:nth-child(2) {
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    top: -100%;
+    left: -25%;
+    background: conic-gradient(#121212 30%, #b70707);
+    animation: btn7 3s linear infinite;
+    filter: blur(2px);
+    cursor: default;
+}
+@keyframes btn7 {
+    100%{
+        transform: rotate(1turn);
+    }
+}
+.botao7 span:nth-child(1) {
+    z-index: 2;
+    background: #121212;
+    position: relative;
+    height: 53px;
+    width: 123px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.botao7 a {
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 3;
+    padding: 20px 34px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Informações*/
+
+.mais {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), #b70707, rgba(0, 0, 0, 0));
+    display: flex;
+    justify-content: center;
+}
+.mais a {
+    text-decoration: none;
+    margin: 0 0 0 10px;
+    color: white;
+    cursor: default;
+}
+.download {
+    grid-row: 1 / 3;
+    display: grid;
+}
+.download img {
+    grid-row: 2;
+    width: 60%;
+    cursor: pointer;
+}
+.desenvolvedor {
+    margin: 30px 30px 30px -90px;
+}
+.desenvolvedor svg {
+    cursor: default;
+}
+.mais .email, .mais .meutelefone, .mais .instagram {
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+/*Conectar*/
+
+.Login {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 400px;
+    height: 430px;
+    color: rgb(0, 0, 0); 
+    border-width: 2px;
+    border-radius: 10px; 
+    border-style: solid;
+    border-color: rgb(255, 0, 0);  
+}
+.Login span:first-child {
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    filter: blur(5px);
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+}
+.Login span:nth-child(2) {
+    background: none;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+    animation: border1 2s linear infinite alternate;
+}
+@keyframes border1 {
+    0%{
+        filter: blur(2px);
+    }
+    50%{
+        filter: blur(7px);
+    }
+    100%{
+        filter: blur(10px);
+    }
+}
+.Login span:nth-child(3) {
+    background: none;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+    animation: border2 3s linear infinite alternate;
+}
+@keyframes border2 {
+    0%{
+        filter: blur(5px);
+        border-color: red;
+    }
+    100%{
+        filter: blur(10px);
+        border-color: black;
+    }
+}
+
+.nomeR {
+    margin: 60px 0 0 50px;
+}
+.emailL, .emailR, .senhaL, .senhaR, .confirmaSenhaR, .emailResgate {
+    margin: 40px 0 0 50px;
+}
+.emailResgate input {
+    width: 400px;
+    height: 25px;
+    font-size: 15px;
+    padding-left: 5px;
+    border-style: none;
+    border-bottom-style: solid;
+    border-color: red;
+    border-width: 2px;
+    outline: 0;
+}
+.senhaL input, .emailL input, .emailR input, .nomeR input, .senhaR input, .confirmaSenhaR input {
+    height: 25px;
+    width: 300px;
+    font-size: 15px;
+    padding-left: 5px;
+    border-style: none;
+    border-bottom-style: solid;
+    border-color: red;
+    border-width: 2px;
+    outline: 0;
+}
+.login, .registro, .resgatarSenha {
+    text-align: center;
+    margin: 50px 0 0 0;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: white;
+}
+.botao {
+    background: red;
+    height:60px;
+    width: 130px;
+    margin: 70px 0 0 0;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+#botao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.cadastro, .esqueceuSenha {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    color: white;
+}
+#criar, #logar, #recuperarSenha {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    padding: 0 0 0 3px;
+}
+.mostrarSenha {
+    position: absolute;
+    margin: -21px 0 0 280px;
+    cursor: pointer;
+    height: 16px;
+}
+.esconderSenha {
+    position: absolute;
+    margin: -21px 0 0 280px;
+    cursor: pointer;
+    height: 16px;
+    display: none;
+}
+
+/*Registrar conta*/
+
+.Registro {
+    margin-top: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 400px;
+    height: 560px;
+    border-width: 2px;
+    border-radius: 10px; 
+    border-style: solid;
+    border-color: rgb(255, 0, 0); 
+    display: none;          
+}
+.Registro span {
+    background: none;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    filter: blur(7px);
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+    animation: border1 2s linear infinite alternate;
+}
+.Registro span:nth-child(2) {
+    background: none;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+    animation: border1 2s linear infinite alternate;
+}
+.Registro span:nth-child(3) {
+    background: none;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+    animation: border2 3s linear infinite alternate;
+}
+
+/*Resgate de Senha*/
+
+.ResgatarSenha {
+    margin-top: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 500px;
+    height: 360px;
+    color: rgb(0, 0, 0); 
+    border-width: 2px;
+    border-radius: 10px; 
+    border-style: solid;
+    border-color: rgb(255, 0, 0);   
+    display: none;           
+}
+.ResgatarSenha span {
+    background: none;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    filter: blur(7px);
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+    animation: border1 2s linear infinite alternate;
+}
+.ResgatarSenha span:nth-child(2) {
+    background: none;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+    animation: border1 2s linear infinite alternate;
+}
+.ResgatarSenha span:nth-child(3) {
+    background: none;
+    position: absolute;
+    top: -1.5%;
+    left: -1.5%;
+    width: 103%;
+    height: 103%;
+    border: inherit;
+    border-radius: 10px;
+    border-style: solid;
+    z-index: -1;
+    animation: border2 3s linear infinite alternate;
+}
+
+/*Media*/
+
+@media(max-width: 960px) {
+    .cartegorias {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+    .filmes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    nav ul, .menubar ul {
+        display: none;
+    }
+    .menubar {
+        display: block;
+        cursor: pointer;
+        height: 60px;
+        width: 75px;
+    }
+    .menubar img {
+        margin: 10px 0 0 10px;
+    }
+    .menubar:hover ul{
+        position: absolute;
+        right: 1px;
+        margin-top: 0;
+        display: block;
+        background: black;
+        cursor: default;
+    }
+    .menubar:hover li{
+        margin-top: -9px;
+        padding-right: 30px;
+    }
+    .menubar:hover li a {
+        margin-left: 6px;
+        padding: 2px;
+        margin: 20px;
+    }
+}
+@media(max-width: 800px) {
+    .filmes {
+        grid-template-columns: repeat(3, 1fr);
+       }
+    .pesquisa {
+        padding-left: 30px;
+    }
+    
+    /*Cartegorias*/
+
+    .cartegorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .adicionados h1 {
+        padding: 0;
+    }
+}
+@media (max-width: 600px) {
+    .filmes {
+        grid-template-columns: repeat(2, 1fr);
+       }
+    .Login, .Registro {
+        width: 80vw;
+    }
+    .senhaL input, .emailL input, .emailR input, .nomeR input, .senhaR input, .confirmaSenhaR input {
+        width: 100%;
+        margin-left: -25px;
+    }
+    .mostrarSenha, .esconderSenha {
+        margin-left: 60vw;
+    }
+}
+@media (max-width: 490px) {
+    .mostrarSenha, .esconderSenha {
+        margin-left: 55vw;
+    }
+}
+@media (max-width: 580px) {
+    .ResgatarSenha {
+        width: 80vw;
+    }
+    .ResgatarSenha input {
+        width: 100%;
+        margin-left: -25px;
+    }
+   .ResgatarSenha h1 {
+    font-size: 22px;
+   } 
+   .ResgatarSenha .botao {
+    width: 100px;
+   }
+   .ResgatarSenha #botao {
+    font-size: 13px;
+   }
+   .ResgatarSenha .cadastro {
+    font-size: 15px;
+   }
+}
+@media (max-width: 460px) {
+    .pesquisa input{
+        width: 100%;
+    }
+    .cartegorias {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .numero {
+        width: 70%;
+    }
+    .desenvolvedor {
+        margin: 0 auto;
+    }
+    .mais {
+        flex-direction: column;
+    }
+    .download img {
+        margin: 0 auto;
+    }
+    
+}
+@media (max-width: 380px) {
+    .mostrarSenha, .esconderSenha {
+        margin-left: 50vw;
+    }
+}
+@media (max-width: 365px) {
+    .filmes {
+        grid-template-columns: repeat(1, 1fr);
+       }
+    .ddd {
+        width: 60%;
+    }
+}
+@media (max-width: 326px) {
+    .Login .cadastro,.Registro .cadastro {
+        font-size: 13px;
+    }
+    .mostrarSenha, .esconderSenha {
+        margin-left: 45vw;
+    }
+    .Login .botao, .Registro .botao {
+        width: 100px;
+    }
+    .Login #botao, .Registro #botao {
+        font-size: 13px;
+    }
+}
+@media (max-width: 320px) {
+    .logo img {
+        width: 100%
+    }
+    h1 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .cartegorias h1, .cartegoria h2 {
+        font-size: medium;
+    }
+    .pesquisa {
+        display: none;
+    }
+    .menubar:hover ul{
+        padding: 0;
+        width: 100%;
+        margin-right: 13px;
+    }
+    .adicionados h1 {
+        font-size: 14px;
+    }
+    .data p{
+        font-size: 10px;
+    }
+    .mais .email, .mais .meutelefone, .mais .instagram{
+        font-size: 7px;
+        display: block;
+
+    }
+}ddd
+@media (max-width: 280px) {
+    .ResgatarSenha h1 {
+        font-size: 15px;
+       }
+    .ResgatarSenha .cadastro {
+        display: block;
+        text-align: center;
+        font-size: 11px;
+    }
+    .Login .cadastro,.Registro .cadastro {
+        display: block;
+        text-align: center;
+        margin-top: 3px;
+    }
+    .mostrarSenha, .esconderSenha {
+        margin-left: 40vw;
+    }
+    .Registro h1, .Login h1 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 240px) {
+    .mostrarSenha, .esconderSenha {
+        margin-left: 35vw;
+    }
+}
+@media (max-width: 220px) {
+    .filme p {
+        font-size: 10px;
+    }
+    .colecao p {
+        font-size: 15px;
+    }
+    .mostrarSenha, .esconderSenha {
+        margin-left: 25vw;
+    }
+}
+@media (max-width: 190px) {
+    .filme{
+        margin: 20px auto;
+    }
+    .colecao .filme {
+        margin: 10px;
+    }
+    .Registro h1 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 180px) {
+    .mostrarSenha, .esconderSenha {
+        margin-left: 16vw;
+    }
+}
+@media (max-width: 151px) {
+    .filme{
+        margin: 10px 10px 10px -10px;
+    }
+    .ResgatarSenha input {
+        width: 130%;
+        margin-left: -35px;
+    }
+}

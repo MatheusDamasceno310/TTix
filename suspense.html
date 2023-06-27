@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="TTix-favicon.png" type="image/x-icon">
+    <title>TTix - Suspense</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="TTix - logo.png" alt="logo"></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="colecao.html">Coleção</a>
+                    </li>
+                    <li>
+                        <a href="#faleconosco">Fale Conosco</a>
+                    </li>
+                    <li>
+                        <a href="registro.html">Logout</a>
+                    </li>
+                </ul>
+                <div class="pesquisa">
+                    <input type="text" placeholder="Buscar">
+                    <div class="busca">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-magnifying-glass"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" class=""></path></svg>
+                    </div>
+                </div>
+            </nav>
+        <div class="menubar">
+            <img src="TTix - menu.png" alt="menu">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="colecao.html">Coleção</a>
+                </li>
+                <li>
+                    <a href="#faleconosco">Fale Conosco</a>
+                </li>
+                <li>
+                    <a href="registro.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!--Suspense-->
+        <section>
+            <h1>Suspense</h1>
+        <div class="filmes">
+
+            <!--Filmes-->
+            
+            <!--
+                <div class="filme">
+                        <p></p>
+                        <div class="capa">
+                            <img src="filmes/" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="linguagem">
+                                <p></p>
+                            </div>
+                            <div class="duracao">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <p></p>
+                        </div>
+                    </div>
+            -->
+            <div class="filme">
+                <p>O Telefone Preto</p>
+                <div class="capa">
+                    <img src="filmes/cIh164JVqUGwVc5fkHsMKkfi9aV-200x300.jpg" alt="O Telefone Preto">
+                </div>
+                <div class="info">
+                    <div class="linguagem">
+                        <p>Dub</p>
+                    </div>
+                    <div class="duracao">
+                        <p>1h 42m</p>
+                    </div>
+                </div>
+                <div class="data">
+                    <p>21 de julho de 2022</p>
+                </div>
+            </div>
+            <div class="filme">
+                <p>Pânico na Floresta: A Fundação</p>
+                <div class="capa">
+                    <img src="filmes/rHmZDnvNy19PKv6dRNZGAj28e5o-200x300.jpg" alt="Pânico na Floresta: A Fundação">
+                </div>
+                <div class="info">
+                    <div class="linguagem">
+                        <p>Dub</p>
+                    </div>
+                    <div class="duracao">
+                        <p>1h 50m</p>
+                    </div>
+                </div>
+                <div class="data">
+                    <p>25 de fevereiro de 2021</p>
+                </div>
+            </div>
+            <div class="filme">
+                <p>Um Lugar Silencioso</p>
+                <div class="capa">
+                    <img src="filmes/0577579-192x300.jpg" alt="Um Lugar Silencioso">
+                </div>
+                <div class="info">
+                    <div class="linguagem">
+                        <p>Dub</p>
+                    </div>
+                    <div class="duracao">
+                        <p>1h 30m</p>
+                    </div>
+                </div>
+                <div class="data">
+                    <p>5 de abril de 2018</p>
+                </div>
+            </div>
+            <div class="filme">
+                <p>Um Lugar Silencioso - Parte II</p>
+                <div class="capa">
+                    <img src="filmes/wYqmuxd9jNFLf3gtQY5vbAUgiGk-200x300.jpg" alt="Um Lugar Silencioso - Parte II">
+                </div>
+                <div class="info">
+                    <div class="linguagem">
+                        <p>Dub</p>
+                    </div>
+                    <div class="duracao">
+                        <p>1h 37m</p>
+                    </div>
+                </div>
+                <div class="data">
+                    <p>17 de junho de 2021</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="mais">
+            <div class="download">
+                <img src="download.png" alt="dowload">
+            </div>
+            <div class="desenvolvedor">
+                <div class="email">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 128C0 92.65 28.65 64 64 64H448C483.3 64 512 92.65 512 128V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V128zM48 128V150.1L220.5 291.7C241.1 308.7 270.9 308.7 291.5 291.7L464 150.1V127.1C464 119.2 456.8 111.1 448 111.1H64C55.16 111.1 48 119.2 48 127.1L48 128zM48 212.2V384C48 392.8 55.16 400 64 400H448C456.8 400 464 392.8 464 384V212.2L322 328.8C283.6 360.3 228.4 360.3 189.1 328.8L48 212.2z"/></svg>
+                    </div>
+                    <a>matheus.damasceno@ba.estudante.senai.br</a>
+                </div>
+                <div class="meutelefone">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                    </div>
+                    <a>+55 (75) 99246-7164</a>
+                </div>
+                <div class="instagram">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    </div>
+                    <a>@ff.tths</a>
+                </div>
+            </div>
+        </div>
+
+            <h1 id="faleconosco">Fale Conosco</h1>
+
+        <fieldset>
+            <div class="nome">
+                <label for="nome"><strong>Nome</strong></label><br>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="email">
+                <label for="email"><strong>Email</strong></label><br>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="telefone">
+                <div class="ddd">
+                    <label for="ddd"><strong>DDD</strong></label><br>
+                    <select name="ddd" id="ddd" required>
+                    <option selected disabled value="">DDD</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="15">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="51">51</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="76">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="71">71</option>
+                        <option value="73">73</option>
+                        <option value="74">74</option>
+                        <option value="75">75</option>
+                        <option value="77">77</option>
+                        <option value="79">79</option>
+                        <option value="81">81</option>
+                        <option value="82">82</option>
+                        <option value="83">83</option>
+                        <option value="84">84</option>
+                        <option value="85">85</option>
+                        <option value="86">86</option>
+                        <option value="87">87</option>
+                        <option value="88">88</option>
+                        <option value="89">89</option>
+                        <option value="91">91</option>
+                        <option value="92">92</option>
+                        <option value="93">93</option>
+                        <option value="94">94</option>
+                        <option value="95">95</option>
+                        <option value="96">96</option>
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99">99</option>
+                    </select>
+                </div>
+                <div class="numero">
+                    <label for="numero"><strong>Número</strong></label><br>
+                    <input type="tel" name="numero" id="numero" required>
+                </div>
+            </div>
+            <div class="recado">
+                <label for="recado"><strong>Deixe seu recado: </strong></label>
+                <textarea name="recado" id="recado" style="width:100%" rows="5" required></textarea>
+            </div>
+            <div class="botao7" onclick="faleConosco()">
+                <span></span>
+                <span></span>
+                <a>Enviar</a>
+            </div>
+        </fieldset>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

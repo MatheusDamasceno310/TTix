@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="TTix-favicon.png" type="image/x-icon">
+    <title>TTix - Login</title>
+</head>
+<body>
+    <header>
+        <a class="logo"><img src="TTix - logo.png" alt="logo"></a>       
+    </header>
+    <main>
+
+        <!--Login-->
+
+        <form class="Login">
+            <span></span>
+            <span></span>
+            <span></span>
+
+                <h1 class="login" id="login">Login</h1>
+
+            <div class="emailL">
+                <input placeholder="Email" type="email" name="email" id="emailL" required>
+            </div> 
+            <div class="senhaL">
+                <input placeholder="Senha" type="password" name="senha" id="senhaL" required>
+                <div class="mostrarSenha" id="mostrarSenhaL" onclick="mostrarSenhaL()">
+                    <img src="olho (1).png">
+                </div>
+                <div class="esconderSenha" id="esconderSenhaL" onclick="esconderSenhaL()">
+                    <img src="olho.png">
+                </div>
+            </div>
+
+            <div class="botao">
+                <p id="botao" onclick="entrar()">Entrar</p>
+            </div>
+
+            <div class="cadastro"><p>Não registrado?</p><p id="criar" onclick="mostrarRegistro()">Crie a sua conta aqui</p></div>
+            <div class="cadastro">
+                <p>Esqueceu a senha?</p><p id="recuperarSenha" onclick="mostrarResgatarSenha()">Clique aqui</p>
+            </div>
+        </form>
+
+        <!--Registro-->
+
+        <form class="Registro">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <h1 class="registro" id="registro">Registro</h1>
+
+            <div class="nomeR">
+                <input placeholder="Nome" type="text" name="nome" id="nomeR" required>
+            </div> 
+            <div class="emailR">
+                <input placeholder="Email" type="email" name="email" id="emailR" required>
+            </div> 
+            <div class="senhaR">
+                <input placeholder="Senha" type="password" name="senha" id="senhaR" required>
+                <div class="mostrarSenha" id="mostrarSenhaR" onclick="mostrarSenhaR()">
+                    <img src="olho (1).png">
+                </div>
+                <div class="esconderSenha" id="esconderSenhaR" onclick="esconderSenhaR()">
+                    <img src="olho.png">
+                </div>
+            </div>
+            <div class="confirmaSenhaR">
+                <input placeholder="Confirme a Senha" type="password" name="senha" id="confirmaSenhaR" required>
+                <div class="mostrarSenha" id="mostrarconfirmaSenhaR" onclick="mostrarconfirmaSenhaR()">
+                    <img src="olho (1).png">
+                </div>
+                <div class="esconderSenha" id="esconderconfirmaSenhaR" onclick="esconderconfirmaSenhaR()">
+                    <img src="olho.png">
+                </div>
+            </div>
+
+            <div class="botao" onclick="cadastrar()">
+                <a id="botao">Registrar</a>
+            </div>
+            <div class="cadastro"><p>Já registrado?</p><p id="logar" onclick="mostrarLogin()">Entrar</p></div>
+        </form>
+
+        <!--Resgatar Senha-->
+
+        <form class="ResgatarSenha">
+            <span></span>
+            <span></span>
+            <span></span>
+
+                <h1 class="resgatarSenha" id="resgatarSenha">Resgate de senha</h1>
+
+            <div class="emailResgate">
+                <input placeholder="Email" type="email" name="email" id="emailResgate" required>
+            </div> 
+
+            <div class="botao">
+                <p id="botao" onclick="resgatarSenha()">Resgatar</p>
+            </div>
+
+            <div class="cadastro"><p>Não registrado?</p><p id="criar" onclick="mostrarRegistro()">Crie a sua conta aqui</p></div>
+            <div class="cadastro"><p>Já registrado?</p><p id="logar" onclick="mostrarLogin()">Entrar</p></div>
+        </form>
+    </main>    
+    <script src="script.js"></script>
+</body>
+</html>
